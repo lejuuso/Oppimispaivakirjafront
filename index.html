@@ -7,20 +7,24 @@
 </head>
 <body>
 <h1>Oppimispäiväkirja</h1>
-
-Otsikko <input id="otsikko" type="text" name="nimi"><br><br>
-Kuvaus <input id="kuvaus" type="text" name="Asiakastyyppi"><br><br>
-Lähde <input id="lahde" type="text" name="Asiakastyyppi"><br><br>
-Aloituspäivä <input id="aloituspaiva" type="date" name="Aloituspäivä"><br><br>
-Valmistumispäivä <input id="lopetuspaiva" type="date" name="Valmistumispäivä"><br><br>
-<p>Tila<select id="valmius" name="Projektin tila">
-    <option value="valmis">Valmis</option><br>
-    <option value="kesken">Kesken</option></select>></p><br>
-
-<button type="button" id="nappi">Tallenna</button><br><br>
-<ul id="lista"></ul>
-
-    <script src="index.js"></script>
-
+<form id="formi" method="post">
+Otsikko <input id="topic" type="text"><br><br>
+Kuvaus <input id="description" type="text"><br><br>
+Lähde <input id="sources" type="text"><br><br>
+Aloituspäivä <input id="startdate" type="date"><br><br>
+Valmistumispäivä <input id="finishingdate" type="date"><br><br>
+<p>Tila <select id="finished">
+    <option value="true">Valmis</option>
+    <br>
+    <option value="false">Kesken</option>
+</select>
+</p>
+<br>
+<button type="submit" onclick="lisaatiedot()"id="nappi">Tallenna</button>
+</form><br/>
+<button type="button" onclick="naytatiedot()" id="nappula">Näytä lista</button>
+<button type="button" onclick="piilotaLista()">Piilota Lista</button> <br><br>
+<table id="lista"></table>
+<script src="index.js"></script>
 </body>
 </html>
